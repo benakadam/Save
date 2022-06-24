@@ -1,0 +1,24 @@
+--komment
+
+create role dbStoredProcedure
+
+grant execute to dbStoredProcedure
+
+
+*******************************STORED PROCEDURE*********************************************
+
+
+Create procedure dbo.sptbl_empdetail_GetAll			--kesobb alter 
+		@name nvarchar(50) = ''
+as
+begin
+	set nocount on;
+	select * from dbo.tbl_empdetail
+	where empname = @name;
+end
+
+
+*Végrehajtása:
+	exec dbo.sptbl_empdetail_GetAll 'adam'
+
+where CAST([Description] AS nvarchar) = 'CS' or CAST([Description] AS nvarchar) = 'PM';			--kasztolas text tablat nvarcharra

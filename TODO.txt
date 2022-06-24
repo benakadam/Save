@@ -1,0 +1,57 @@
+Telerik Winforms
+	Gridlayout
+	Dropdown
+Típus control (Datum, checkbox,…)
+Export (grid)
+List/tree view
+
+
+
+ADO.NET 
+	Connected environment
+	MS SQL
+	Alias
+	Management studio
+	Tárolt eljárás
+	View-k létrehozása
+	Lekérdezés elemzése
+	Nolock
+
+
+numericupdown -> radspineditor
+combobox      -> raddropdownlist		(dropdownstyle: dropdownlist)
+
+
+Hangfire, Azure CDN, ELK, Jaspersoft
+
+*******************************HOTKEYS******************************************
+
+comment 		ctrl+k+c
+uncomment 		ctrl+k+u
+refactor 		ctrl+r+r
+konstruktor 		ctrl+.   vagy	 ctor+tab
+property 		     	 	 prop+tab
+console.writeline		 	 cw+tab
+minden elofordulas atirasa  ctrl+h
+join lines 		shift+alt+j		(edit->advanced->join lines)
+save all		ctrl+shift+s
+
+*******************************JELSZAVAK****************************************
+
+*Telerik login:
+	dombijd@antikvarium.hu
+	Antikdeveloper123
+
+*Adatbázis Staging login:
+	benaka
+	Asdf1234
+
+*Antik Staging login:
+	antik
+	VifonBomba
+
+*Wifi:
+	spiderXS3
+
+*Redmine
+	benaka@antikvarium.hu

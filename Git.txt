@@ -1,0 +1,80 @@
+********************************************CONFIG*******************************************************
+
+git config --global core.autocrlf true   		//line ending
+git clone <repo link>
+git init  						//ha a mappaban vagyunk amit hozza adunk
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+alias
+
+********************************************UPDATE*******************************************************
+
+git pull		//frissiti a repot
+
+git fetch  		//megmondja mi valtozott, de nem valtoztat
+git status		//mi valtozott localba
+git diff <file>		//mit valtoztattunk a fileon
+git log			//commit history		--oneline
+git reflog		//pointerek állása
+
+git branch              //branchek állapota	--merged/--no-merged  //melyik agak mergeltek es melyikek nem
+
+********************************************UPLOAD*******************************************************
+
+git add                        //git add .
+git commit -m "valami"	      //helyettuk git commit -am "commit"				
+git push
+
+********************************************UNDO*********************************************************
+
+git restore <file>	   	      			//unmodify
+git restore --staged <file> 	     		       //unstage
+git commit --amend -m "new commit message" 	      //commit modositas	 
+git reset --hard <pointer>	   		     //pull/commit visszavonas (elozo commit allapotara ter vissza) elotte git refloggal megnezni az elozo allapot pointeret (felulrol a 2.)
+
+********************************************BRANCH*******************************************************
+branch név feat/backend-10395-mpl-api-integration
+git commit -m "[#10395] mpl api integration"
+git push --set-upstream origin feat/backend-10496-mpl-home_delivery
+git push --set-upstream origin <nev>	//első pushnál kell a --set kapcsolo
+
+git branch <nev> 		//uj branch létrehozása		 //
+git checkout <nev>	       	//atvaltas branchre		//helyettuk git chechkout -b <nev>
+git push origin <nev>	      	//uj branch feltoltes a repoba és minden pusholast igy kell csinalni ezen a agon
+
+git merge <nev>			//mainbe mergelés (előtte át kell váltani a mainre)
+git rebase  			//a merge osszefesul a rebase pedig hozzafuzi a masterhez a branchet
+
+git branch -d <nev>		//branch torlese
+********************************************STASH*******************************************************
+
+git stash			//ekkor minden eddigi valtoztatas eltarolodik amit meg nem committoltal
+git stash list			//stahelt dolgok listaja
+
+git stash apply 		//legutobbi stash visszatoltese vagy 
+git stash apply stash@{2}	//valamelyik korabbi 
+
+git stash drop 			//stash torlese
+git stash drop stash@{n}
+
+********************************************HIBÁK********************************************************
+
+Another git process seems to be running in this repository, e.g.		//index.lock kitörlése a .git mappában
+an editor opened by 'git commit'. Please make sure all processes			//akkor jelentkezik ha felbeszakitottad a vim-et
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+
+error: failed to push some refs to 'https://github.com/benakadam/Proba.git'		//git push -f origin <ujbranch>
+hint: Updates were rejected because a pushed branch tip is behind its remote			//git push origin <ujbranch> során lép fel
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+Action -> resolve conflict -> restart merge
+
+Kdiff3 "There is a line end style conflict"
+	1. Click in the C pane.
+	2. Choose an encoding other than 'conflict'

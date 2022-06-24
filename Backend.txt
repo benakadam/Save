@@ -1,0 +1,23 @@
+*********************************************PROJEKT FUTTATASA*******************************************************
+
+Antik.Client.UI -> App.config -> url-ek kicserelése localhostosra(3.) -> jobb klikk solutionra -> set startup projects -> multiple -> Client.UI, Service.WebApi kell
+
+*********************************************CHANGES*****************************************************************
+
+Antik.Service.WebApi -> Web.config		valtozok pl url	(CSAK SANDBOX)	 Web.config -> Web.Production.config   élesre konvertálás
+Antik.Service.BusinessLogic			MPL mappa
+Antik.Service.WebApi -> InvoiceController	GetOrCreateMplDeliveryWithLabel
+Antik.Service.BusinessLogic -> InvoiceManager	GetOrCreateMplDeliveryLabel
+Antik.Service.DataAccess -> InvoiceAccess	GetMplDeliveryWithLabel,InsertUpdateMplDelivery,GetMplDeliveryByInvoiceId	adatok lekerese az adatb bol
+Antik.Service.Model.Request -> GetOrCreateMplDeliveryWithLabelRequest
+
+InvoiceModifyPrintView -> MPL PostaPont vonalkód nyomtatás (1082)
+
+Antik.DataBase -> Incremental 	SQL scriptek
+*********************************************************************************************************************
+
+
+
+
+
+
